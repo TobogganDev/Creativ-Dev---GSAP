@@ -51,8 +51,21 @@ a{
   }
 }
 
+.jedi{
+  background-image: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.sith{
+  background-image: url('../img/bg-2.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
 .jedi-bg{
-  background-image: url("../img/jedi-bg.jpg");
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -60,6 +73,40 @@ a{
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.scroll-downs {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  margin: auto;
+  width :34px;
+  height: 55px;
+  z-index: 50;
+}
+.mousey {
+  width: 3px;
+  padding: 10px 15px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }
 
 .wrapper{
@@ -72,5 +119,27 @@ a{
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
+    .content{
+      padding: 2rem;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background-color: rgba(182, 182, 182, 0.2);
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      gap: 3rem;
+      img{
+        width: 200px;
+      }
+      .info{
+        .theme{
+          text-transform: uppercase;
+          letter-spacing: 1.5em;
+          opacity: 0.3;
+        }
+        
+      }
+      
+    }
   }
 }
