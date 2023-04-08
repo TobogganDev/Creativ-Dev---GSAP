@@ -10,12 +10,14 @@ body{
   color: white;
   position: relative;
   font-size: 18px;
+  overflow-x: hidden;
 }
 
 header{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 50;
 }
 
 section{
@@ -46,5 +48,29 @@ a{
     user-select: none;
     transition: all .4s ease;
     font-weight: 200;
+  }
+}
+
+.jedi-bg{
+  background-image: url("../img/jedi-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.wrapper{
+  display: flex;
+  flex-wrap: nowrap;
+  .section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
   }
 }
