@@ -1,0 +1,11 @@
+Model Information:
+* title:	Star Wars - Logo
+* source:	https://sketchfab.com/3d-models/star-wars-logo-3cb31e7865994304bebad83c85f3c5ee
+* author:	David Tena C. (https://sketchfab.com/DavidTenaC.20)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Star Wars - Logo" (https://sketchfab.com/3d-models/star-wars-logo-3cb31e7865994304bebad83c85f3c5ee) by David Tena C. (https://sketchfab.com/DavidTenaC.20) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

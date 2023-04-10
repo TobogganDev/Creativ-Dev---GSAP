@@ -75,6 +75,13 @@ a{
   left: 0;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+
 .scroll-downs {
   position: fixed;
   bottom: 50px;
