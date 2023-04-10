@@ -50,19 +50,39 @@ a{
     font-weight: 200;
   }
 }
-
+.imgWrapper {
+  position: absolute;
+  bottom: 0;
+  overflow-y: hidden;
+  img {
+    width: 200px;
+    transform: translateY(110%);
+    transition: all .4s ease;
+  }
+  img.reveal {
+    transform: translateY(0);
+  }
+  #img4 {
+    
+    height: 190px;
+    width: auto;
+  }
+  #img5 {
+    height: 366px;
+    width: auto;
+  }
+}
 .jedi{
   background-image: url('../img/background.jpg');
   background-size: cover;
   background-position: center;
-
+  position: relative;
 }
 
 .sith{
   background-image: url('../img/bg-2.jpg');
   background-size: cover;
   background-position: center;
-
 }
 .jedi-bg{
   background-image: url("../img/background.jpg");

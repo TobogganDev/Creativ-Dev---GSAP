@@ -8,21 +8,31 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="scss/style.css">
-  <title>Document</title>
+  <title>Star Wars Perso</title>
 </head>
 <body>
   <header>
     <h1>Star Wars Perso</h1>
   </header>
   <section>
-    <a href="jedi.html" class="container jedi">
+    <a href="jedi.html" class="container jedi" id="containerJedi">
+      <div class="imgWrapper">
+        <img id="img1" src="img/yoda.png" alt="star wars caracter">
+        <img id="img2" src="img/obiWan.png" alt="star wars caracter">
+        <img id="img3" src="img/windu.png" alt="star wars caracter">
+      </div>
       <div class="">
         <h2>Jedi</h2>
       </div>
     </a>
     
     <hr>
-    <a href="" class="container sith">
+    <a href="sith.html" class="container sith" id="containerSith">
+      <div class="imgWrapper">
+        <img id="img4" src="img/vader.png" alt="star wars caracter">
+        <img id="img5" src="img/palpatine.png" alt="star wars caracter">
+        <img id="img6" src="img/maul.png" alt="star wars caracter">
+      </div>
       <div class="">
         <h2>Sith</h2>
       </div>
@@ -30,5 +40,7 @@
     
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>

@@ -49,10 +49,33 @@ a {
   font-weight: 200;
 }
 
+.imgWrapper {
+  position: absolute;
+  bottom: 0;
+  overflow-y: hidden;
+}
+.imgWrapper img {
+  width: 200px;
+  transform: translateY(110%);
+  transition: all 0.4s ease;
+}
+.imgWrapper img.reveal {
+  transform: translateY(0);
+}
+.imgWrapper #img4 {
+  height: 190px;
+  width: auto;
+}
+.imgWrapper #img5 {
+  height: 366px;
+  width: auto;
+}
+
 .jedi {
   background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .sith {
