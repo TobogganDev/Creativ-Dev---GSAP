@@ -11,19 +11,43 @@ function init() {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
+    //const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth/3, window.innerHeight/3);
     document.body.appendChild(renderer.domElement);
+
+    // Ajouter des lumières
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    const dlLight1 = new THREE.DirectionalLight(0x0000FF, 0.7);
+    dlLight1.position.set( 45, 45, 45 );
+    const dLightHelper = new THREE.DirectionalLightHelper( dlLight1, 5 );
+
+    const dlLight2 = new THREE.DirectionalLight(0xFF0000, 0.5);
+    dlLight2.position.set( -45, 45, 45 );
+    const dLightHelper2 = new THREE.DirectionalLightHelper( dlLight2, 5 );
+
+    scene.add(ambientLight, dlLight1, dlLight2);
+
     
     const loader = new GLTFLoader();
     loader.load(modelUrl, function (gltfObject) { // Utiliser une autre variable (gltfObject) pour stocker l'objet gltf chargé
-        gltf = gltfObject; // Affecter l'objet gltf chargé à la variable gltf globale
-        scene.add(gltf.scene);
+        
+        gltf = gltfObject;
+        const mesh = new THREE.Mesh(gltf.scene.children[0].geometry);
+        const material = new THREE.MeshStandardMaterial({
+            metalness: 1,
+            roughness: 0.5,
+        });
+        mesh.material = material;
+        scene.add(mesh, gltf.scene);
+
+        dlLight1.lookAt(mesh.position);
+        dlLight2.lookAt(mesh.position);
     });
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
+
 
     camera.position.z = 4;
     camera.position.y = 1;
+    camera.position.x = -1;
     
     const animate = function () {
         requestAnimationFrame(animate);
